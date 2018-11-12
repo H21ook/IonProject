@@ -1,5 +1,7 @@
 {
   "name": "IonProject",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

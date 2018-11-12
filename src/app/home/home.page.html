@@ -1,10 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+<ion-content text-center>
+  <div class="m-cover-img">
+    <ion-header no-border style="background-color: rgba(0,0,0,0.2);">
+      <ion-toolbar>
+        <ion-title>Home</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let file of _fileList; let i = index">
+      <ion-thumbnail slot="start" (click)="play(file, i)">
+        <ion-icon name="{{iconPP}}"></ion-icon>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{file.name}}</h2>
+        <h3>{{file.path}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

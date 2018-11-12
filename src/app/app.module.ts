@@ -9,6 +9,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { File } from '@ionic-native/file/ngx';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
+import { MusicControls } from '@ionic-native/music-controls/ngx';
+import { Media } from '@ionic-native/media/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -16,6 +21,10 @@ import { AppComponent } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
+    File,
+    NativeAudio,
+    MusicControls,
+    Media,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
